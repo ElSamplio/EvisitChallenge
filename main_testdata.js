@@ -6,6 +6,7 @@ function createData() {
   for (let i = 0; i < 10; i++) {
     finalData = finalData.concat(ipsList);
   }
+  //O(n)
   console.log("Data length: ", finalData.length);
   const finalTime = new Date().getTime();
   console.log(
@@ -41,6 +42,7 @@ function top_100() {
   for (const key of top100Keys) {
     top100Addresses.push({ ip_address: key, quantity: ipAddressDict[key] });
   }
+  //O(n)
   const finalTime = new Date().getTime();
   console.log(
     `InitialTime in top_100: `,
@@ -59,6 +61,7 @@ function clear() {
 ipsList.forEach((ip) => {
   request_handled(ip.ip_address);
 });
+//O(n)
 
 const top_100_ip = top_100();
 console.log(top_100_ip);
