@@ -8,7 +8,14 @@ function createData() {
   }
   console.log("Data length: ", finalData.length);
   const finalTime = new Date().getTime();
-  console.log("Time taken in createData: ", finalTime - initialTime, " ms");
+  console.log(
+    `InitialTime in createData: `,
+    initialTime,
+    `;finalTime in createData: ` + finalTime,
+    "; Time taken in createData: ",
+    finalTime - initialTime,
+    " ms"
+  );
 }
 
 createData();
@@ -30,12 +37,19 @@ function top_100() {
     return ipAddressDict[b] - ipAddressDict[a];
   });
   const top100Keys = keys.slice(0, 100);
-  const finalTime = new Date().getTime();
   const top100Addresses = [];
   for (const key of top100Keys) {
     top100Addresses.push({ ip_address: key, quantity: ipAddressDict[key] });
   }
-  console.log("Time taken in top_100: ", finalTime - initialTime, " ms");
+  const finalTime = new Date().getTime();
+  console.log(
+    `InitialTime in top_100: `,
+    initialTime,
+    `;finalTime in top_100: ` + finalTime,
+    "; Time taken in top_100: ",
+    finalTime - initialTime,
+    " ms"
+  );
   return top100Addresses;
 }
 function clear() {

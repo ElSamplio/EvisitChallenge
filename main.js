@@ -17,6 +17,7 @@ function top_100() {
   });
   return keys.slice(0, 100);
 }
+
 function clear() {
   ipAddressDict = {};
 }
