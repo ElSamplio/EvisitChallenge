@@ -5,7 +5,7 @@ Imagine your team has developed a web service that receives requests from about 
 ### Short description of my approach
 
 - What would I do differently if I had more time?
-  I would implement errors handling and boundaries in the input data
+  <p>I would implement errors handling and boundaries in the input data</p>
 
 - What is the runtime complexity of each function?
 
@@ -13,10 +13,10 @@ Imagine your team has developed a web service that receives requests from about 
   <p>First, I created a data dictionary, whose key is the IP address to check and the value is the IP address counter; then, in the request_handled function I start the counter with 1 if my data dictionary doesn't include the received IP address, else it would increment this counter. After this, the top_100 function is executed in order to sort the counters retrieved by each key (IP address) in descending way using the js sort function and it returns the first 100 records using the slice function. Finally, the function clear is executed to clean the data dictionary, assigning a new value of an empty object, so the reference to the previous one will be cleaned by GC.</p>
 
 - What other approaches did I decide not to pursue?
-  In my firts sight I was thinking about some other data structures such as trees and handling different threads to improve performance, also using the reduce function to accumulate the IP addresses count; but after a better analysis and understanding I decide to move with the data dictionary to go faster in the code with many less lines and also achieving the desired performance.
+  <p>In my firts sight I was thinking about some other data structures such as trees and handling different threads to improve performance, also using the reduce function to accumulate the IP addresses count; but after a better analysis and understanding I decide to move with the data dictionary to go faster in the code with many less lines and also achieving the desired performance.</p>
 
 - How would I test this?
-  Actually I made another approach <code>main_testdata.js</code> with some little changes to run some tests, in which I take a .json file with some more than 2 million of records (I limited to this number to avoid a huge file) so I added a function named createData() to iterate 10 times this file and add the records to my data dictionary. Also I changed the output to show the number of requests by IP in the first 10 output and the response times. The results are as follows:
+  <p>Actually I made another approach <code>main_testdata.js</code> with some little changes to run some tests, in which I take a .json file with some more than 2 million of records (I limited to this number to avoid a huge file) so I added a function named createData() to iterate 10 times this file and add the records to my data dictionary. Also I changed the output to show the number of requests by IP in the first 10 output and the response times. The results are as follows:</p>
 
 ```sh
 Data length:  22104110
